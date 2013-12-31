@@ -18,7 +18,7 @@
     }
     ],
     "bin": {
-        "cook": "cook.js"
+        "cook": "bin/cook.bin.js"
     },
     "engines": {
         "node": ">= 0.8.0"
