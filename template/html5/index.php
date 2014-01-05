@@ -24,7 +24,7 @@ if ($bootstrap == 'Y' || $bootstrap == 'y') {
 }
 ?>
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr.min.js"></script>
+        <script src="js/vendor/modernizr.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
