@@ -5,11 +5,13 @@ module.exports = function(grunt) {
             compile: {
                 options: {
                     baseUrl: '.',
+                    appDir: 'js/dev/',
+                    dir: 'js/built/',
                     paths: {
                         // jquery: 'jquery.min' //Use this to minifiy jquery into your main
                         //jquery: 'empty:' //Use this to continue using CDN loading
                     },
-                    out: 'js/main.js',
+                    mainConfigFile: 'config.js',
                     removeCombined: false
                 }
             }
@@ -17,7 +19,7 @@ module.exports = function(grunt) {
         watch: {
             js: {
                 files: ['js/dev/*.js'],
-                tasks: ['concat:js', 'requirejs'],
+                tasks: ['requirejs'],
                 options: {
                     livereload: true
                 }

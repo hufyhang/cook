@@ -39,7 +39,7 @@ if ($bootstrap == 'Y' || $bootstrap == 'y') {
         <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
 <?php
 if ($requirejs == 'Y' || $requirejs == 'y') {
-    echo "\n\t\t<script data-main=\"js/main.js\" src=\"js/vendor/require.min.js\"></script>\n";
+    echo "\n\t\t<script data-main=\"js/built/main.js\" src=\"js/vendor/require.min.js\"></script>\n";
 }
 ?>
         <script src="js/plugins.js"></script>
@@ -52,8 +52,8 @@ if ($ribs == 'Y' || $ribs == 'y') {
     echo "\n\t\t<script src=\"js/vendor/ribs.min.js\"></script>\n";
 }
 
-if ($requirejs != 'Y' || $requirejs != 'y') {
-    echo "\n\t\t<script src="js/main.min.js"></script>\n"
+if ($requirejs != 'Y' && $requirejs != 'y') {
+    echo "\n\t\t<script src=\"js/main.min.js\"></script>\n";
 }
 ?>
     </body>
