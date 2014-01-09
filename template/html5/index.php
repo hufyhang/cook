@@ -43,9 +43,16 @@ else {
         <p>Hello world!</p>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
 <?php
+if ($requirejs != 'Y' && $requirejs != 'y') {
+    echo "\n\t\t<script>window.jQuery || document.write('<script src=\"js/vendor/jquery.min.js\"><\/script>')</script>\n";
+    echo "\n\t\t<script src=\"js/plugins.js\"></script>\n";
+}
+else {
+    echo "\n\t\t<script>window.jQuery || document.write('<script src=\"dist/js/vendor/jquery.min.js\"><\/script>')</script>\n";
+    echo "\n\t\t<script src=\"dist/js/vendor/plugins.js\"></script>\n";
+}
+
 if ($bootstrap == 'Y' || $bootstrap == 'y') {
     echo "\n\t\t<script src=\"js/vendor/bootstrap.min.js\"></script>\n";
 }
