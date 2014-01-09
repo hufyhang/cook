@@ -20,10 +20,11 @@ $requirejs = $_GET['requirejs'];
 <?php
 if ($requirejs != 'Y' && $requirejs != 'y') {
     echo "\n\t\t<link rel=\"stylesheet\" href=\"css/normalize.css\">\n";
-}
-if ($bootstrap == 'Y' || $bootstrap == 'y') {
-    echo "\n\t\t<link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n";
-    echo "\n\t\t<link rel=\"stylesheet\" href=\"css/bootstrap-theme.min.css\">\n";
+
+    if ($bootstrap == 'Y' || $bootstrap == 'y') {
+        echo "\n\t\t<link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n";
+        echo "\n\t\t<link rel=\"stylesheet\" href=\"css/bootstrap-theme.min.css\">\n";
+    }
 }
 if ($requirejs == 'Y' || $requirejs == 'y') {
     echo "\n\t\t<link rel=\"stylesheet\" href=\"dist/css/style.min.css\">\n";
