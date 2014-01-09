@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         },
         watch: {
             js: {
-                files: ['js/dev/*.js', 'dist/js/vendor/*.js'],
+                files: ['js/dev/*.js', 'js/vendor/*.js'],
                 tasks: ['requirejs'],
                 options: {
                     livereload: true
