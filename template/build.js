@@ -1,6 +1,6 @@
 {
     baseUrl: 'js/dev/',
-    dir: 'js/dist/',
+    dir: 'dist/js/',
     mainConfigFile: 'config.js',
     removeCombined: true,
     fileExclusionRegExp: /^\./,

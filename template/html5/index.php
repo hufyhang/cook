@@ -17,14 +17,21 @@ $requirejs = $_GET['requirejs'];
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
 <?php
+if ($requirejs != 'Y' && $requirejs != 'y') {
+    echo "\n\t\t<link rel=\"stylesheet\" href=\"css/normalize.css\">\n";
+}
 if ($bootstrap == 'Y' || $bootstrap == 'y') {
     echo "\n\t\t<link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n";
     echo "\n\t\t<link rel=\"stylesheet\" href=\"css/bootstrap-theme.min.css\">\n";
 }
+if ($requirejs == 'Y' || $requirejs == 'y') {
+    echo "\n\t\t<link rel=\"stylesheet\" href=\"dist/css/style.min.css\">\n";
+}
+else {
+    echo "\n\t\t<link rel=\"stylesheet\" href=\"css/main.css\">\n";
+}
 ?>
-        <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr.js"></script>
     </head>
     <body>
@@ -48,6 +55,7 @@ if ($ribs == 'Y' || $ribs == 'y') {
 }
 
 if ($requirejs == 'Y' || $requirejs == 'y') {
+    echo "\n\t\t<!-- change data-main into \"dist/js/..\" before release -->\n";
     echo "\n\t\t<script data-main=\"js/built/main.js\" src=\"js/vendor/require.min.js\"></script>\n";
 }
 

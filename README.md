@@ -10,7 +10,6 @@ Prerequisite
 * Internet connection :-)
 * [Node.js](http://nodejs.org/)
 * Node.js npm
-* [Grunt-CLI](http://gruntjs.com/)
 * [LiveReload](http://livereload.com/) browser plugins for `grunt watch`
 
 Installation

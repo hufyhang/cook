@@ -1,6 +1,18 @@
 module.exports = function(grunt) {
     grunt.registerTask('watch', ['watch']);
     grunt.initConfig({
+        concat: {
+            css: {
+                src: ['css/*.css'],
+                dest: 'dist/css/combined.css'
+            }
+        },
+        cssmin: {
+            css: {
+                src: 'dist/css/combined.css',
+                dest: 'dist/css/style.min.css'
+            }
+        },
         requirejs: {
             compile: {
                 options: {
@@ -24,8 +36,15 @@ module.exports = function(grunt) {
                     livereload: true
                 }
             },
+            css: {
+                files: ['css/*.css'],
+                tasks: ['concat:css', 'cssmin'],
+                options: {
+                    livereload: true
+                }
+            },
             others: {
-                files: ['*.html', 'css/*.css'],
+                files: ['*.html'],
                 options: {
                     livereload: true
                 }
@@ -34,6 +53,8 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-watch');
 };
