@@ -10,6 +10,7 @@ echo '"name": "' . $_GET['name'] . '",';
     "grunt-cli": "latest",
     "grunt-contrib-concat": "latest",
     "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-sass": "latest",
     "grunt-contrib-requirejs": "latest",
     "grunt-contrib-watch": "latest"
   }

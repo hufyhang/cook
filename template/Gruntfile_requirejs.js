@@ -1,9 +1,20 @@
 module.exports = function(grunt) {
     grunt.registerTask('watch', ['watch']);
     grunt.initConfig({
+        sass:  {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: '.',
+                    src: ['sass/*.scss'],
+                    dest: 'css/',
+                    ext: '.css'
+                }]
+            }
+        },
         concat: {
             css: {
-                src: ['css/*.css'],
+                src: ['css/*.css', 'css/sass/*.css'],
                 dest: 'dist/css/combined.css'
             }
         },
@@ -37,8 +48,15 @@ module.exports = function(grunt) {
                 }
             },
             css: {
-                files: ['css/*.css'],
+                files: ['css/*.css', 'css/sass/*.css'],
                 tasks: ['concat:css', 'cssmin'],
+                options: {
+                    livereload: true
+                }
+            },
+            sass: {
+                files: ['sass/*.scss'],
+                tasks: ['sass'],
                 options: {
                     livereload: true
                 }
@@ -55,6 +73,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-watch');
 };
