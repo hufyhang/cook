@@ -27,3 +27,19 @@ To create a new Web development project:
 
         cook -c projectName
 
+Project Build & Deploy
+======================
+
+For **RequireJS** supporeted projects:
+
+1. Ensure RequireJS and its Optimizer are installed.
+2. Build project:
+
+        r.js -o build.js
+
+3. All CSSs and JSs are either combined or uglified and enventually exported to `/dist`.
+
+For **non-RequireJS** projects:
+
+CSSs and JSs are in `/css` and `/js/built` respectively.
+
