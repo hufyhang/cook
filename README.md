@@ -11,6 +11,7 @@ Prerequisite
 * [Node.js](http://nodejs.org/)
 * Node.js npm
 * [LiveReload](http://livereload.com/) browser plugins for `grunt watch`
+* SASS for live processing `sass/*.scss`
 
 Installation
 ============
