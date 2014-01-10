@@ -17,14 +17,12 @@ $requirejs = $_GET['requirejs'];
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-<?php
-if ($requirejs != 'Y' && $requirejs != 'y') {
-    echo "\n\t\t<link rel=\"stylesheet\" href=\"css/normalize.css\">\n";
+        <link rel="stylesheet" href="vendor/css/normalize.css">
 
-    if ($bootstrap == 'Y' || $bootstrap == 'y') {
-        echo "\n\t\t<link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n";
-        echo "\n\t\t<link rel=\"stylesheet\" href=\"css/bootstrap-theme.min.css\">\n";
-    }
+<?php
+if ($bootstrap == 'Y' || $bootstrap == 'y') {
+    echo "\n\t\t<link rel=\"stylesheet\" href=\"vendor/css/bootstrap.min.css\">\n";
+    echo "\n\t\t<link rel=\"stylesheet\" href=\"vendor/css/bootstrap-theme.min.css\">\n";
 }
 if ($requirejs == 'Y' || $requirejs == 'y') {
     echo "\n\t\t<link rel=\"stylesheet\" href=\"dist/css/style.min.css\">\n";
@@ -33,7 +31,7 @@ else {
     echo "\n\t\t<link rel=\"stylesheet\" href=\"css/main.css\">\n";
 }
 ?>
-        <script src="js/vendor/modernizr.js"></script>
+        <script src="vendor/js/modernizr.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -43,22 +41,22 @@ else {
         <!-- Add your site or application content here -->
         <p>Hello world!</p>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="vendor/js/jquery.min.js"><\/script>')</script>
+        <script src="vendor/js/plugins.js"></script>
 
 <?php
 if ($bootstrap == 'Y' || $bootstrap == 'y') {
-    echo "\n\t\t<script src=\"js/vendor/bootstrap.min.js\"></script>\n";
+    echo "\n\t\t<script src=\"vendor/js/bootstrap.min.js\"></script>\n";
 }
 
 if ($ribs == 'Y' || $ribs == 'y') {
-    echo "\n\t\t<script src=\"js/vendor/ribs.min.js\"></script>\n";
+    echo "\n\t\t<script src=\"vendor/js/ribs.min.js\"></script>\n";
 }
 
 if ($requirejs == 'Y' || $requirejs == 'y') {
     echo "\n\t\t<!-- change data-main into \"dist/js/..\" before release -->";
-    echo "\n\t\t<script data-main=\"js/built/main.js\" src=\"js/vendor/require.min.js\"></script>\n";
+    echo "\n\t\t<script data-main=\"js/built/main.js\" src=\"vendor/js/require.min.js\"></script>\n";
 }
 
 if ($requirejs != 'Y' && $requirejs != 'y') {

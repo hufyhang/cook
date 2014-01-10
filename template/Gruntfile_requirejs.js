@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         },
         watch: {
             js: {
-                files: ['js/dev/*.js', 'js/vendor/*.js'],
+                files: ['js/dev/*.js'],
                 tasks: ['requirejs'],
                 options: {
                     livereload: true
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
                 }
             },
             others: {
-                files: ['*.html'],
+                files: ['*.html', 'vendor/js/*.js', 'vendor/css/*.css'],
                 options: {
                     livereload: true
                 }
