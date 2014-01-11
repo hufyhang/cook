@@ -50,8 +50,8 @@ if ($bootstrap == 'Y' || $bootstrap == 'y') {
 }
 
 if ($ribs == 'Y' || $ribs == 'y') {
-    echo "\n\t\t<script src=\"vendor/js/ribs.min.js\"></script>";
     echo "\n\t\t<script src=\"vendor/js/routie.min.js\"></script>";
+    echo "\n\t\t<script src=\"vendor/js/ribs.min.js\"></script>";
 }
 
 if ($requirejs == 'Y' || $requirejs == 'y') {
